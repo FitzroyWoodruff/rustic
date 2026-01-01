@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{ title | default(value="My Rustic Blog") }}</title>
+		<link rel="stylesheet" href="{{ path_prefix }}/static/style.css" />
+	</head>
+	<body>
+		<main>
+			<h1>{{ title | default(value="Post") }}</h1>
+			<h3>{{stinger | default(value="")}}</h3>
+			<article>{{ content | safe }}</article>
+		</main>
+	</body>
+</html>
